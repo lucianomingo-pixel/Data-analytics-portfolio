@@ -1,80 +1,77 @@
-# Project 002 – SQL to Power BI End-to-End Analysis
+# Project 002 — Sales & Commercial Performance Dashboard
 
-## Overview
-
-End-to-end data analysis project covering the full workflow from data extraction using SQL to interactive dashboard development in Power BI.
-
-This project demonstrates the complete data lifecycle:
-- Data querying and extraction (SQL)
-- Dataset preparation and structuring
-- Data modelling in Power BI
-- KPI development using DAX
-- Interactive dashboard design for business decision-making
+**Stack:** Power BI · DAX · Power Query  
+**Domain:** Commercial Performance & Discount Analysis  
+**Industry:** Sports Retail — Global Markets
 
 ---
 
-## Data Extraction (SQL)
+## Business Context
 
-The dataset was generated using structured SQL queries including:
+A global sports retail company operating across five markets (Europe, LATAM, Pacific Asia, USCA and Africa) needed a clearer view of its commercial performance across product categories and regions.
 
-- SELECT statements with filtering
-- JOIN operations
-- Aggregations (SUM, COUNT, AVG)
-- GROUP BY and ORDER BY clauses
-- KPI-oriented calculations
+The finance and commercial teams were working with fragmented data and had two key unresolved questions: which markets and categories were driving revenue, and whether the company’s discount strategy was generating incremental sales or simply eroding margin.
 
-The resulting dataset was exported as a CSV file and used as the source for Power BI modelling.
+**The goal:** build an interactive Power BI dashboard that tracks sales performance and evaluates the real impact of discounts on net revenue.
 
----
+**Key business questions answered:**
+- Which markets and product categories generate the most revenue?
+- - How is total sales volume trending month by month and year over year?
+  - - What is the relationship between discount spend and total benefit?
+    - - Are discounts driving more transactions or just reducing margin?
+      - - How does order volume vary across years and payment types?
+       
+        - ---
 
-## Data Modelling (Power BI)
+        ## Dashboard Overview
 
-Within Power BI:
+        ### Page 1 — Sales Performance
+        Tracks total sales, transaction volume, average sales per month and total benefit. Filterable by year, department and market. Includes breakdown by category, payment type and geographic market.
 
-- Data cleaning and transformation performed using Power Query
-- Relationships created between tables
-- Star-schema modelling approach
-- Data validation and consistency checks
+        ![Sales Dashboard](./dashboard-sales.png)
 
----
+        ### Page 2 — Discounts & Transactions
+        Analyses quarterly discount amount vs total benefit, net sales, order variation year over year and transaction volume per year. Filterable by country, segment and department.
 
-## DAX & KPI Development
+        ![Discounts Dashboard](./dashboard-discounts-transactions.png)
 
-Custom DAX measures were created to calculate:
+        ---
 
-- Performance indicators
-- Aggregated business metrics
-- Trend analysis metrics
-- Conditional performance comparisons
+        ## What Was Built
 
-The focus was on building decision-oriented KPIs rather than simple descriptive metrics.
+        - **Data model:** relationships between sales facts, products, markets, segments and a custom date table
+        - - **DAX measures:** Total Sales, Net Sales, Total Benefit, Total Discount Amount, Transactions per Year, Orders Variation YoY %
+          - - **Power Query:** data cleaning, null handling, country name standardisation, date table with English locale
+            - - **Interactive filters:** country, segment, department, year — cross-filtering across all visuals
+             
+              - ---
 
----
+              ## Key KPIs
 
-## Dashboard Design
+              | KPI | Description |
+              |---|---|
+              | Total Sales | Gross revenue across all markets and categories |
+              | Net Sales | Revenue after discounts applied |
+              | Total Benefit | Net margin contribution |
+              | Total Discount Amount | Absolute discount spend across all transactions |
+              | Sales with Discount | Number of transactions where a discount was applied |
+              | Orders Variation YoY % | Growth or decline in order volume by period |
+              | Transactions per Year | Total order volume trend across years |
 
-The final dashboard includes:
+              ---
 
-- Interactive filters
-- KPI cards
-- Trend visualisations
-- Comparative analysis views
-- Business-focused layout for usability
+              ## Files
 
----
+              | File | Description |
+              |---|---|
+              | `dashboard.pbix` | Power BI source file |
+              | `dashboard-sales.png` | Sales Performance page screenshot |
+              | `dashboard-discounts-transactions.png` | Discounts & Transactions page screenshot |
 
-## Tools Used
+              ---
 
-- SQL
-- Power BI
-- DAX
-- Power Query
-- CSV structured dataset
+              ## Stack
 
----
-
-## Business Focus
-
-This project simulates a real-world business scenario where raw structured data is extracted via SQL and transformed into actionable insights through modelling and KPI reporting.
-
-The objective was to demonstrate analytical thinking, structured modelling and business-oriented data storytelling.
+              ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+              ![DAX](https://img.shields.io/badge/DAX-F2C811?style=flat-square)
+              ![Power Query](https://img.shields.io/badge/Power%20Query-217346?style=flat-square)
