@@ -10,17 +10,19 @@ Background in supply chain, logistics and operations
 
 ### [Project 001 — Operations KPI Dashboard](./project-001-powerbi-operations/project-001-powerbi-operations-dashboard)
 **Stack:** Power BI · DAX · Power Query  
-End-to-end Power BI project tracking sales performance and shipping KPIs across regions, segments and years. Includes data modelling, DAX measures and interactive filtering.
+**Industry:** Office Supplies & Technology Distribution  
+Interactive dashboard tracking sales vs target and shipping KPIs for a US-based distributor operating across 4 regions and 3 customer segments.
 
-![Dashboard Preview](./project-001-powerbi-operations/project-001-powerbi-operations-dashboard/Proyecto001-01.png)
+![Dashboard Preview](./project-001-powerbi-operations/project-001-powerbi-operations-dashboard/dashboard-sales-overview.png)
 
 ---
 
-### [Project 002 — SQL to Power BI: End-to-End Sales Analysis](./project-002-sql-to-powerbi-analysis)
-**Stack:** SQL · Power BI · DAX  
-Full analytics pipeline: data extraction with SQL, transformation in Power Query, star-schema modelling, and interactive dashboards tracking sales, transactions and discount performance.
+### [Project 002 — Sales & Commercial Performance Dashboard](./project-002-sql-to-powerbi-analysis)
+**Stack:** Power BI · DAX · Power Query  
+**Industry:** Sports Retail — Global Markets  
+Commercial performance and discount analysis dashboard for a global sports retailer operating across 5 markets, evaluating revenue trends and the impact of discount strategy on net sales.
 
-![Dashboard Preview](./project-002-sql-to-powerbi-analysis/Proyecto002-01.png)
+![Dashboard Preview](./project-002-sql-to-powerbi-analysis/dashboard-sales.png)
 
 ---
 
